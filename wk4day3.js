@@ -86,3 +86,45 @@ for (const turles of ninjaTurtles) {
 }
 
 
+// Methods, Revisited // 
+const favMovies = ['Jaws', 'The Fellowship of the Ring', 'Howl\'s Moving Castle', 'Django Unchained', 
+     'Cloud Atlas', 'The Usual Suspects', 'Toy Story', 'Conan the Barbarian', 'Titanic', 'Harry Potter', 
+        'Fried Green Tomatoes', 'Volver', 'Oculus', 'Seven', 
+        'Black Panther', 'Harry Potter', 'Imitation of Life', 'Snatch', 'Fast and Furious'];
+
+// use the .sortmethod Thought question: what did this do to the array? Did it permanently alter it? 
+    favMovies.sort();
+    console.log(favMovies);
+
+// Use the method pop 
+    favMovies.pop();
+    console.log(favMovies);
+// push "Guardians of the Galaxy"
+    favMovies.push('Guardians of the Galaxy')
+    console.log(favMovies);
+// Reverse the array 
+    favMovies.reverse();
+    console.log(favMovies);
+// Use the shift method
+    favMovies.shift();
+    console.log(favMovies);
+// unshift - what does it return?
+const unshiftResult = favMovies.unshift('Avatar');
+    console.log(favMovies);
+    console.log(unshiftResult);
+// splice"Django Unchained" and add "Avatar" (try finding the index of "Django Unchained", instead of counting it yourself) Thought question: did this permanently alter our array?
+const indexToReplace = favMovies.indexOf('Django Unchained');
+    if (indexToReplace !== -1) {
+    favMovies.splice(indexToReplace, 1, 'Avatar');
+    console.log(favMovies);
+
+// slicethe last half of the array (challenge yourself and try to programatically determine the middle of the array rather than counting it and hard coding it) - Thought question: did this permanently alter our array?
+const middleIndex = Math.floor(favMovies.length / 2);
+const slicedArray = favMovies.slice(middleIndex);
+console.log(slicedArray);
+console.log(favMovies);
+
+// store the value of your slicein a variable, console.log it - Thought question: what is going on here?
+const indexOfFastAndFurious = favMovies.indexOf('Fast and Furious');
+    console.log(favMovies.indexOf('FastAndFurious'));
+}
